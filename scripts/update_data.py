@@ -30,7 +30,8 @@ async def generate_json():
     print("Scraping completed.")
 
     print("Extracting data and analytics...")
-    jobs, total_jobs = await list_jobs(limit=1000)
+    jobs_response = await list_jobs(page=1, per_page=1000)
+    jobs = jobs_response.jobs
     
     dashboard = await get_dashboard()
     skill_graph = await get_skill_graph()
