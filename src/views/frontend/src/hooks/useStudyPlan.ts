@@ -16,7 +16,7 @@ export type { ChatMessage };
 export function useStudyPlanChat() {
   return useMutation<ChatResponse, Error, string>({
     mutationFn: async (message: string) => {
-      const { data } = await apiClient.post("/api/studyplan/chat", { message });
+      const { data } = await apiClient.post("/api/chat", { message });
       return data;
     },
   });
