@@ -17,7 +17,7 @@ from src.controllers.analytics_controller import (
     get_skill_clustering, get_company_hiring_patterns, 
     get_company_skill_matrix, get_category_hiring_trends
 )
-from src.controllers.jobs_controller import get_jobs
+from src.controllers.jobs_controller import list_jobs
 
 async def generate_json():
     print("Connecting to local MongoDB (GitHub Actions service)...")
@@ -30,7 +30,7 @@ async def generate_json():
     print("Scraping completed.")
 
     print("Extracting data and analytics...")
-    jobs, total_jobs = await get_jobs(limit=1000)
+    jobs, total_jobs = await list_jobs(limit=1000)
     
     dashboard = await get_dashboard()
     skill_graph = await get_skill_graph()
