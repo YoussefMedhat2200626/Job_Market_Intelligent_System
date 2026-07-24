@@ -1,0 +1,7 @@
+{
+  "name": "job-market-frontend-proxy",
+  "version": "1.0.0",
+  "scripts": {
+    "vercel-build": "cd src/views/frontend && npm install && npm run build"
+  }
+}
