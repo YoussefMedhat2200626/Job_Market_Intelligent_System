@@ -1,0 +1,10 @@
+*.py
+backend-requirements.txt
+docker/
+.env.example
+report/
+src/controllers/
+src/models/
+src/services/
+src/utils/
+src/views/api/
