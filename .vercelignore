@@ -1,9 +1,0 @@
-main.py
-requirements.txt
-src/views/api/
-src/controllers/
-src/services/
-src/models/
-src/utils/
-docker/
-.env
