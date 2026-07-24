@@ -10,8 +10,8 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY backend-requirements.txt .
+RUN pip install --no-cache-dir -r backend-requirements.txt
 
 COPY . .
 COPY --from=frontend-build /frontend/dist /app/src/views/frontend/dist

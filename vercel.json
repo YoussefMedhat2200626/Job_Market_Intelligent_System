@@ -1,0 +1,10 @@
+{
+  "outputDirectory": "src/views/frontend/dist",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
